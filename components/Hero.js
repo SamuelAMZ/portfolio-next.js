@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="hero-grid md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-5 xl:px-0 ">
+    <div className="hero-grid md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-0 ">
       <div className=" w-full">
         <div className="hero-text-wrapper">
           <h1>HELLO, SAM HERE.</h1>
@@ -59,7 +59,7 @@ const Hero = () => {
               fill="#0000ff"
             />
           </svg>
-          <h5>DEPLOYEMENT AUTOMATIONS</h5>
+          <h5>CLOUD AUTOMATIONS</h5>
         </div>
         <div className="flex">
           <div className="full-btn">
@@ -71,11 +71,11 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className=" w-full flex align-middle justify-center">
+      <div className=" w-full flex align-middle justify-center pb-14 pt-8 md:!p-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="361"
-          height="361"
+          width="381"
+          height="381"
           viewBox="0 0 361 361"
           fill="none"
         >
