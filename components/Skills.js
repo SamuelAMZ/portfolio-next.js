@@ -67,6 +67,8 @@ const Skills = () => {
               <BsDot />
               FIREBASE
               <BsDot />
+              PUPPETEER/SCRAPING
+              <BsDot />
               REST API
               <BsDot />
               AUTH0

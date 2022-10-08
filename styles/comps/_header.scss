@@ -76,6 +76,32 @@
   }
 }
 
+.filled-btn {
+  width: fit-content;
+  background-color: transparent;
+  color: #161513;
+
+  font-weight: 600;
+  font-size: 17px;
+  padding: 0.8rem 0;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease;
+
+  &:hover {
+    color: #0000ff;
+  }
+
+  button {
+    text-decoration: underline;
+  }
+}
+
+.full-w-btn {
+  width: 100% !important;
+  text-align: center;
+}
+
 .sidemenu {
   position: fixed;
   top: 0;
