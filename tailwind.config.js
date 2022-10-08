@@ -5,7 +5,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      BaiJamjuree: ["'Bai Jamjuree'", "sans-serif"],
+    },
   },
   plugins: [],
 };

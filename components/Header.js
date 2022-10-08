@@ -33,7 +33,7 @@ const Header = () => {
         </ul>
       </div>
 
-      <div className="contact hidden md:block">
+      <div className="empty-btn hidden md:block">
         <button>Contact</button>
       </div>
 
