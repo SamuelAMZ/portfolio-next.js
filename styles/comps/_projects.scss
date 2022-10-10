@@ -17,13 +17,19 @@
     align-items: center;
     justify-content: center;
 
+    &:hover img {
+      transform: scale(110%);
+    }
+
     .img {
       width: 100%;
       height: 100%;
+      overflow: hidden;
       img {
         width: 100%;
         height: 357px;
         object-fit: cover;
+        transition: all 300ms ease;
       }
     }
 
@@ -31,6 +37,11 @@
       display: flex;
       flex-direction: column;
       gap: 30px;
+
+      button {
+        line-height: 1.5;
+        text-align: start;
+      }
 
       .badge {
         background-color: #0000ff;
@@ -59,8 +70,21 @@
   .project {
     grid-template-columns: 1fr 1fr !important;
 
+    button {
+      text-align: start;
+      line-height: 1 !important;
+    }
+
     .pro-reverse {
       grid-row: 1 !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .img {
+    img {
+      height: 200px !important;
     }
   }
 }

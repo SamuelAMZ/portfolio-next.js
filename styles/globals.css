@@ -11,6 +11,8 @@ body {
   color: #161513;
   font-size: 15px;
   line-height: 20px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {

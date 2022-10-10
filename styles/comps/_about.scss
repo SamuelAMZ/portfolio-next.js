@@ -10,6 +10,7 @@
     grid-template-rows: auto;
 
     .about-head {
+      padding-bottom: 2rem;
       h2 {
         margin-top: 0px;
         margin-bottom: 0px;
@@ -72,5 +73,9 @@ h4 {
 @media (min-width: 1024px) {
   .about-grid {
     grid-template-columns: 1fr 1.5fr !important;
+
+    .about-head {
+      padding-bottom: 0rem;
+    }
   }
 }

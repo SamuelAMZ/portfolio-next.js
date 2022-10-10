@@ -166,3 +166,31 @@
     transition: all 300ms ease;
   }
 }
+
+.back-to-top {
+  position: fixed;
+  z-index: 3;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.5rem;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: #0000ff;
+  border: 2px solid #0000ff;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 22px;
+    border: 1px solid #0000ff;
+  }
+}

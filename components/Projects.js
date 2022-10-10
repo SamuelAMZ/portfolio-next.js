@@ -2,8 +2,8 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <div className="section projects">
-      <div className="about-grid md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-0">
+    <div id="projects" className="section projects">
+      <div className="about-grid md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-5">
         <div className="section-head">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const Projects = () => {
               <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
             </div>
             <div className="desc">
-              <div className="badge">fullstack && scrapping</div>
+              <div className="badge">fullstack && scraping</div>
               <h2 className="title">
                 Cloud providers pricing API (Open source)
               </h2>
@@ -71,9 +71,7 @@ const Projects = () => {
             </div>
             <div className="desc">
               <div className="badge">backend only</div>
-              <h2 className="title">
-                Youtube video transcrition data getter API
-              </h2>
+              <h2 className="title">Youtube video transcritions fetcher API</h2>
               <h4 className="description">
                 A Node based API for getting and fetching youtube videos
                 transcription content.
@@ -109,7 +107,11 @@ const Projects = () => {
           </div>
           <div className="flex">
             <div className="full-btn full-w-btn">
-              <button>More Project</button>
+              <button>
+                <a href="https://github.com/SamuelAMZ" target="blank">
+                  More Projects
+                </a>
+              </button>
             </div>
           </div>
         </div>

@@ -1,0 +1,52 @@
+.posts-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.post {
+  width: 100%;
+  padding: 32px;
+  align-items: flex-start;
+  border: 2px solid #000;
+  background-color: transparent;
+  color: #161513;
+  text-decoration: none;
+
+  display: grid;
+  align-items: center;
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+  grid-template-columns: 1fr;
+
+  &:hover {
+    background-color: #161513;
+    color: white;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .date {
+      color: #0000ff;
+      font-size: 16px;
+      line-height: 32px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .heading {
+      line-height: 40px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .post {
+    grid-template-columns: 1fr 1fr !important;
+    grid-row-gap: 40px;
+    grid-column-gap: 50px;
+  }
+}

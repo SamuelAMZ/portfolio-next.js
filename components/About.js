@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="about-container">
-      <div className="about-grid md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-0">
+    <div id="about" className="about-container">
+      <div className="about-grid md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-5">
         <div className="about-head">
           <div className="header-detail-wrapper">
             <h5>ABOUT</h5>
@@ -50,10 +50,14 @@ const About = () => {
           </h4>
           <div className="flex">
             <div className="full-btn">
-              <button>Projects</button>
+              <button>
+                <a href="#projects">Projects</a>
+              </button>
             </div>
             <div className="empty-btn">
-              <button>Contact</button>
+              <button>
+                <a href="#contact">Contact</a>
+              </button>
             </div>
           </div>
         </div>
