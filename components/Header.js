@@ -37,7 +37,7 @@ const Header = () => {
         className="header md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 flex items-center justify-between md:px-10 xl:px-5 "
       >
         <div>
-          <a href="#top">
+          <a href="/#top">
             <img src="/img/logo-light.png" alt="logo" className="logo" />
           </a>
         </div>
@@ -45,23 +45,23 @@ const Header = () => {
         <div className="menu hidden md:block">
           <ul>
             <li>
-              <a className="active" href="#top">
+              <a className="active" href="/#top">
                 Home
               </a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="/#about">About</a>
             </li>
             <li>
-              <a href="#projects">Projets</a>
+              <a href="/#projects">Projets</a>
             </li>
             <li>
-              <a href="#blog">Blog</a>
+              <a href="/#blog">Blog</a>
             </li>
           </ul>
         </div>
 
-        <a href="#contact">
+        <a href="/#contact">
           <div className="empty-btn hidden md:block">
             <button>Contact</button>
           </div>
@@ -86,26 +86,26 @@ const Header = () => {
               <ul>
                 <li>
                   <BiHomeAlt />
-                  <a className="active" href="#top">
+                  <a className="active" href="/#top">
                     Home
                   </a>
                 </li>
                 <li>
                   <BiUser />
-                  <a href="#about">About</a>
+                  <a href="/#about">About</a>
                 </li>
                 <li>
                   <CgWorkAlt />
-                  <a href="#projects">Projets</a>
+                  <a href="/#projects">Projets</a>
                 </li>
                 <li>
                   <HiOutlineDocumentDuplicate />
-                  <a href="#blog">Blog</a>
+                  <a href="/#blog">Blog</a>
                 </li>
               </ul>
 
               <button>
-                <a href="#contact">Contact</a>
+                <a href="/#contact">Contact</a>
               </button>
             </div>
           </>

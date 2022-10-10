@@ -96,6 +96,8 @@ const Skills = () => {
               GITHUB ACTIONS
               <BsDot />
               LINUX
+              <BsDot />
+              BASH
             </h4>
           </div>
           <div className="box">
