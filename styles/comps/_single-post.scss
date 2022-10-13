@@ -1,3 +1,14 @@
+.post-section {
+  position: relative;
+
+  .layer3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, 100%);
+  }
+}
+
 .post-container {
   .post-grid {
     display: grid;

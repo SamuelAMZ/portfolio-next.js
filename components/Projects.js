@@ -1,6 +1,34 @@
-import React from "react";
+import Link from "next/link";
 
 const Projects = () => {
+  // link projects to single pages
+  const data = [
+    {
+      id: "1",
+      title: "Cloud providers pricing API",
+      content:
+        "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+    },
+    {
+      id: "2",
+      title: "Web3 advance social media platform",
+      content:
+        "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+    },
+    {
+      id: "3",
+      title: "Youtube video transcritions fetcher API",
+      content:
+        "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+    },
+    {
+      id: "4",
+      title: "Advance typeracer racing game",
+      content:
+        "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+    },
+  ];
+
   return (
     <div id="projects" className="section projects">
       <div className="about-grid md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-5">
@@ -39,7 +67,9 @@ const Projects = () => {
               <div className="flex">
                 <div className="filled-btn">
                   <button>
-                    Live Link && Source Code && Tech Stack Details
+                    <Link href={`/projects/1`}>
+                      Live Link && Source Code && Tech Stack Details
+                    </Link>
                   </button>
                 </div>
               </div>
@@ -59,7 +89,9 @@ const Projects = () => {
               <div className="flex">
                 <div className="filled-btn">
                   <button>
-                    Live Link && Source Code && Tech Stack Details
+                    <Link href={`/projects/2`}>
+                      Live Link && Source Code && Tech Stack Details
+                    </Link>
                   </button>
                 </div>
               </div>
@@ -79,7 +111,9 @@ const Projects = () => {
               <div className="flex">
                 <div className="filled-btn">
                   <button>
-                    Live Link && Source Code && Tech Stack Details
+                    <Link href={`/projects/3`}>
+                      Live Link && Source Code && Tech Stack Details
+                    </Link>
                   </button>
                 </div>
               </div>
@@ -99,7 +133,9 @@ const Projects = () => {
               <div className="flex">
                 <div className="filled-btn">
                   <button>
-                    Live Link && Source Code && Tech Stack Details
+                    <Link href={`/projects/4`}>
+                      Live Link && Source Code && Tech Stack Details
+                    </Link>
                   </button>
                 </div>
               </div>

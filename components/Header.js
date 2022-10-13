@@ -4,6 +4,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { HiOutlineDocumentDuplicate } from "react-icons/hi";
 import { IoIosArrowUp } from "react-icons/io";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const Header = () => {
   const [isMenuOpen, setIsmenuOpen] = useState(false);
@@ -37,26 +38,34 @@ const Header = () => {
         className="header md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 flex items-center justify-between md:px-10 xl:px-5 "
       >
         <div>
-          <a href="/#top">
-            <img src="/img/logo-light.png" alt="logo" className="logo" />
-          </a>
+          <Link href={"/#top"}>
+            <a>
+              <img src="/img/logo-light.png" alt="logo" className="logo" />
+            </a>
+          </Link>
         </div>
         {/* desktop only */}
         <div className="menu hidden md:block">
           <ul>
             <li>
-              <a className="active" href="/#top">
-                Home
-              </a>
+              <Link href="/#top">
+                <a className="active">Home</a>
+              </Link>
             </li>
             <li>
-              <a href="/#about">About</a>
+              <Link href="/#about">
+                <a>About</a>
+              </Link>
             </li>
             <li>
-              <a href="/#projects">Projets</a>
+              <Link href="/#projects">
+                <a>Projets</a>
+              </Link>
             </li>
             <li>
-              <a href="/#blog">Blog</a>
+              <Link href="/#blog">
+                <a>Blog</a>
+              </Link>
             </li>
           </ul>
         </div>
