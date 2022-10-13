@@ -186,6 +186,38 @@
   justify-content: center;
 }
 
+// loading
+.loading {
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  opacity: 0.5;
+  z-index: 100;
+
+  .loader {
+    height: 7px;
+    background-color: #0000ff;
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    animation: loading 1s linear 1;
+  }
+
+  @keyframes loading {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 700px) {
   .back-to-top {
     bottom: 1rem;

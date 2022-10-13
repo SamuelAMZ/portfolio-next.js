@@ -3,13 +3,14 @@ import { BiUser, BiHomeAlt } from "react-icons/bi";
 import { CgWorkAlt } from "react-icons/cg";
 import { HiOutlineDocumentDuplicate } from "react-icons/hi";
 import { IoIosArrowUp } from "react-icons/io";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 const Header = () => {
   const [isMenuOpen, setIsmenuOpen] = useState(false);
   const [isSubPage, setIsSubPage] = useState(false);
+  const [isAnim, setIsAnim] = useState(false);
   const router = useRouter();
 
   // scroll to top
@@ -30,6 +31,14 @@ const Header = () => {
     }
   };
 
+  // page transition loading animation
+  const animStart = () => {
+    setIsAnim(true);
+  };
+  const animEnd = () => {
+    setIsAnim(false);
+  };
+
   useEffect(() => {
     window.onscroll = () => scrollFunction();
   }, [topNow]);
@@ -43,6 +52,16 @@ const Header = () => {
     } else {
       setIsSubPage(true);
     }
+
+    router.events.on("routeChangeStart", animStart);
+    router.events.on("routeChangeComplete", animEnd);
+    router.events.on("routeChangeError", animEnd);
+
+    return () => {
+      router.events.off("routeChangeStart", animStart);
+      router.events.off("routeChangeComplete", animEnd);
+      router.events.off("routeChangeError", animEnd);
+    };
   }, []);
 
   return (
@@ -203,6 +222,13 @@ const Header = () => {
           </>
         )}
       </div>
+
+      {/* loading screen routing animation */}
+      {isAnim && (
+        <div className="loading">
+          <div className="loader"></div>
+        </div>
+      )}
 
       {/* scroll to top */}
       {topNow && (
