@@ -5,9 +5,12 @@ import { HiOutlineDocumentDuplicate } from "react-icons/hi";
 import { IoIosArrowUp } from "react-icons/io";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [isMenuOpen, setIsmenuOpen] = useState(false);
+  const [isSubPage, setIsSubPage] = useState(false);
+  const router = useRouter();
 
   // scroll to top
   const scrollToTop = () => {
@@ -31,6 +34,17 @@ const Header = () => {
     window.onscroll = () => scrollFunction();
   }, [topNow]);
 
+  // get if page is a parent page or a subpage
+  useEffect(() => {
+    if (router.pathname !== "/") {
+      setIsSubPage(true);
+    } else if (router.pathname === "/") {
+      setIsSubPage(false);
+    } else {
+      setIsSubPage(true);
+    }
+  }, []);
+
   return (
     <>
       <div
@@ -46,35 +60,64 @@ const Header = () => {
         </div>
         {/* desktop only */}
         <div className="menu hidden md:block">
-          <ul>
-            <li>
-              <Link href="/#top">
-                <a className="active">Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#about">
-                <a>About</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#projects">
-                <a>Projets</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#blog">
-                <a>Blog</a>
-              </Link>
-            </li>
-          </ul>
+          {isSubPage ? (
+            <ul>
+              <li>
+                <Link href="/#top">
+                  <a className="active">Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/#about">
+                  <a>About</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/#projects">
+                  <a>Projets</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/#blog">
+                  <a>Blog</a>
+                </Link>
+              </li>
+            </ul>
+          ) : (
+            <ul>
+              <li>
+                <a href="/#top" className="active">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/#about">About</a>
+              </li>
+              <li>
+                <a href="/#projects">Projets</a>
+              </li>
+              <li>
+                <a href="/#blog">Blog</a>
+              </li>
+            </ul>
+          )}
         </div>
 
-        <a href="/#contact">
-          <div className="empty-btn hidden md:block">
-            <button>Contact</button>
-          </div>
-        </a>
+        {isSubPage ? (
+          <Link href="/#contact">
+            <a>
+              <div className="empty-btn hidden md:block">
+                <button>Contact</button>
+              </div>
+            </a>
+          </Link>
+        ) : (
+          <a href="#contact">
+            <div className="empty-btn hidden md:block">
+              <button>Contact</button>
+            </div>
+          </a>
+        )}
 
         {/* mobile only */}
         <div className="icon-wr md:hidden" onClick={() => setIsmenuOpen(true)}>
@@ -92,30 +135,70 @@ const Header = () => {
               className="content shadow-xl"
               onClick={() => setIsmenuOpen(false)}
             >
-              <ul>
-                <li>
-                  <BiHomeAlt />
-                  <a className="active" href="/#top">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <BiUser />
-                  <a href="/#about">About</a>
-                </li>
-                <li>
-                  <CgWorkAlt />
-                  <a href="/#projects">Projets</a>
-                </li>
-                <li>
-                  <HiOutlineDocumentDuplicate />
-                  <a href="/#blog">Blog</a>
-                </li>
-              </ul>
+              {isSubPage ? (
+                <>
+                  <ul>
+                    <li>
+                      <BiHomeAlt />
 
-              <button>
-                <a href="/#contact">Contact</a>
-              </button>
+                      <Link href="/#top">
+                        <a className="active">Home</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <BiUser />
+                      <Link href="/#about">
+                        <a>About</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <CgWorkAlt />
+                      <Link href="/#projects">
+                        <a>Projets</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <HiOutlineDocumentDuplicate />
+                      <Link href="/#blog">
+                        <a>Blog</a>
+                      </Link>
+                    </li>
+                  </ul>
+
+                  <button>
+                    <Link href="/#contact">
+                      <a>Contact</a>
+                    </Link>
+                  </button>
+                </>
+              ) : (
+                <>
+                  <ul>
+                    <li>
+                      <BiHomeAlt />
+                      <a className="active" href="/#top">
+                        Home
+                      </a>
+                    </li>
+                    <li>
+                      <BiUser />
+                      <a href="/#about">About</a>
+                    </li>
+                    <li>
+                      <CgWorkAlt />
+                      <a href="/#projects">Projets</a>
+                    </li>
+                    <li>
+                      <HiOutlineDocumentDuplicate />
+                      <a href="/#blog">Blog</a>
+                    </li>
+                  </ul>
+
+                  <button>
+                    <a href="/#contact">Contact</a>
+                  </button>
+                </>
+              )}
             </div>
           </>
         )}

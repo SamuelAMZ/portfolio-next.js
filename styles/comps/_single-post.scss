@@ -6,6 +6,13 @@
     top: 0;
     right: 0;
     transform: translate(50%, 100%);
+
+    &:last-child {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(50%, 20%);
+    }
   }
 }
 
@@ -44,6 +51,34 @@
             margin-bottom: 0;
           }
         }
+      }
+    }
+  }
+}
+
+.mobile-actions {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 0 5px 10px rgba(193, 193, 193, 0.156);
+
+    div {
+      width: 100% !important;
+      border-right: 1px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:last-child {
+        border-right: none;
       }
     }
   }

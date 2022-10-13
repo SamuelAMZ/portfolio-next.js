@@ -95,7 +95,7 @@ const Id = ({ project }) => {
               <h1>{project.title}</h1>
               <h4 dangerouslySetInnerHTML={{ __html: project.content }}></h4>
             </div>
-            <div className="post-actions">
+            <div className="post-actions !hidden md:!block">
               <div className="actions">
                 <div className="full-btn">
                   <button>
@@ -143,8 +143,8 @@ const Id = ({ project }) => {
         <div className="layer3 md:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="150"
-            height="150"
+            width="100"
+            height="100"
             viewBox="0 0 361 361"
             fill="none"
           >
@@ -163,6 +163,28 @@ const Id = ({ project }) => {
           </svg>
         </div>
       </div>
+
+      {/* mobile actions */}
+      <div className="mobile-actions md:hidden">
+        <div className="actions">
+          <div className="full-btn">
+            <button>
+              <a href="#">Live</a>
+            </button>
+          </div>
+          <div className="full-btn">
+            <button>
+              <a href="#">Video</a>
+            </button>
+          </div>
+          <div className="full-btn">
+            <button>
+              <a href="#">Code</a>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <Footer />
     </>
   );

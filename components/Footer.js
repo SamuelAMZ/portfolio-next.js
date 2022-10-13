@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FiTwitter, FiGithub, FiLinkedin } from "react-icons/fi";
 import { FaEnvelope, FaTelegramPlane } from "react-icons/fa";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Footer = () => {
+  const [isSubPage, setIsSubPage] = useState(false);
+  const router = useRouter();
+
+  // get if page is a parent page or a subpage
+  useEffect(() => {
+    if (router.pathname !== "/") {
+      setIsSubPage(true);
+    } else if (router.pathname === "/") {
+      setIsSubPage(false);
+    } else {
+      setIsSubPage(true);
+    }
+  }, []);
+
   return (
     <>
       {/* elements */}
@@ -13,8 +29,8 @@ const Footer = () => {
               <FaEnvelope />
             </div>
             <h3>Emaiil address</h3>
-            <a href="mailto:#">
-              <h4>samuel@gmail.com</h4>
+            <a href="mailto:samueldevpro09@gmail.com">
+              <h4>samueldevpro09@gmail.com</h4>
             </a>
           </div>
           <div className="elm">
@@ -22,8 +38,8 @@ const Footer = () => {
               <FaTelegramPlane />
             </div>
             <h3>Telegram</h3>
-            <a href="mailto:#">
-              <h4>@samuel</h4>
+            <a href="https://t.me/sam_dev09">
+              <h4>@sam_dev09</h4>
             </a>
           </div>
         </div>
@@ -32,27 +48,54 @@ const Footer = () => {
       <div className="footer-container max-w-full ">
         <div className="footer-content md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-5 flex items-center justify-between flex-col gap-8 md:flex-row">
           <div>
-            <a href="#top">
-              <img src="/img/logo-dark.png" alt="logo" className="logo" />
-            </a>
+            <Link href={"/#"}>
+              <a>
+                <img src="/img/logo-dark.png" alt="logo" className="logo" />
+              </a>
+            </Link>
           </div>
           <div className="menu">
-            <ul>
-              <li>
-                <a className="active" href="#top">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#projects">Projets</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
+            {isSubPage ? (
+              <ul>
+                <li>
+                  <Link href="/#top">
+                    <a className="active">Home</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#about">
+                    <a>About</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#projects">
+                    <a>Projets</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#blog">
+                    <a>Blog</a>
+                  </Link>
+                </li>
+              </ul>
+            ) : (
+              <ul>
+                <li>
+                  <a href="/#top" className="active">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="/#about">About</a>
+                </li>
+                <li>
+                  <a href="/#projects">Projets</a>
+                </li>
+                <li>
+                  <a href="/#blog">Blog</a>
+                </li>
+              </ul>
+            )}
           </div>
         </div>
 

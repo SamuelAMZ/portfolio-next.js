@@ -51,96 +51,106 @@ const Projects = () => {
           <h4 className="subheading">LEARNINGS && ACCOIMPLISHMENTS</h4>
         </div>
         <div className="projects-elements">
-          <div className="project">
-            <div className="img">
-              <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
-            </div>
-            <div className="desc">
-              <div className="badge">fullstack && scraping</div>
-              <h2 className="title">
-                Cloud providers pricing API (Open source)
-              </h2>
-              <h4 className="description">
-                A Node API of prices of different cloud services (from more than
-                7 providers, AWS, GCP, AZURE, LINODE ...)
-              </h4>
-              <div className="flex">
-                <div className="filled-btn">
-                  <button>
-                    <Link href={`/projects/1`}>
-                      Live Link && Source Code && Tech Stack Details
-                    </Link>
-                  </button>
+          <Link href={`/projects/1`}>
+            <a>
+              <div className="project">
+                <div className="img">
+                  <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
+                </div>
+                <div className="desc">
+                  <div className="badge">fullstack && scraping</div>
+                  <h2 className="title">
+                    Cloud providers pricing API (Open source)
+                  </h2>
+                  <h4 className="description">
+                    A Node API of prices of different cloud services (from more
+                    than 7 providers, AWS, GCP, AZURE, LINODE ...)
+                  </h4>
+                  <div className="flex">
+                    <div className="filled-btn">
+                      <button>
+                        Live Link && Source Code && Tech Stack Details
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="project">
-            <div className="img">
-              <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
-            </div>
-            <div className="desc pro-reverse">
-              <div className="badge">fullstack</div>
-              <h2 className="title">Web3 advance social media platform</h2>
-              <h4 className="description">
-                A social network quite similar to twitter with its main features
-                but with a Web3 dimension
-              </h4>
-              <div className="flex">
-                <div className="filled-btn">
-                  <button>
-                    <Link href={`/projects/2`}>
-                      Live Link && Source Code && Tech Stack Details
-                    </Link>
-                  </button>
+            </a>
+          </Link>
+          <Link href={`/projects/2`}>
+            <a>
+              <div className="project">
+                <div className="img">
+                  <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
+                </div>
+                <div className="desc pro-reverse">
+                  <div className="badge">fullstack</div>
+                  <h2 className="title">Web3 advance social media platform</h2>
+                  <h4 className="description">
+                    A social network quite similar to twitter with its main
+                    features but with a Web3 dimension
+                  </h4>
+                  <div className="flex">
+                    <div className="filled-btn">
+                      <button>
+                        Live Link && Source Code && Tech Stack Details
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="project">
-            <div className="img">
-              <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
-            </div>
-            <div className="desc">
-              <div className="badge">backend only</div>
-              <h2 className="title">Youtube video transcritions fetcher API</h2>
-              <h4 className="description">
-                A Node based API for getting and fetching youtube videos
-                transcription content.
-              </h4>
-              <div className="flex">
-                <div className="filled-btn">
-                  <button>
-                    <Link href={`/projects/3`}>
-                      Live Link && Source Code && Tech Stack Details
-                    </Link>
-                  </button>
+            </a>
+          </Link>
+          <Link href={`/projects/3`}>
+            <a>
+              <div className="project">
+                <div className="img">
+                  <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
+                </div>
+                <div className="desc">
+                  <div className="badge">backend only</div>
+                  <h2 className="title">
+                    Youtube video transcritions fetcher API
+                  </h2>
+                  <h4 className="description">
+                    A Node based API for getting and fetching youtube videos
+                    transcription content.
+                  </h4>
+                  <div className="flex">
+                    <div className="filled-btn">
+                      <button>
+                        Live Link && Source Code && Tech Stack Details
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="project">
-            <div className="img">
-              <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
-            </div>
-            <div className="desc pro-reverse">
-              <div className="badge">frontend only</div>
-              <h2 className="title">Advance typeracer racing game</h2>
-              <h4 className="description">
-                An advanced typing game allows you to compete against bots with
-                random or preset speeds.
-              </h4>
-              <div className="flex">
-                <div className="filled-btn">
-                  <button>
-                    <Link href={`/projects/4`}>
-                      Live Link && Source Code && Tech Stack Details
-                    </Link>
-                  </button>
+            </a>
+          </Link>
+          <Link href={`/projects/4`}>
+            <a>
+              <div className="project">
+                <div className="img">
+                  <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
+                </div>
+                <div className="desc pro-reverse">
+                  <div className="badge">frontend only</div>
+                  <h2 className="title">Advance typeracer racing game</h2>
+                  <h4 className="description">
+                    An advanced typing game allows you to compete against bots
+                    with random or preset speeds.
+                  </h4>
+                  <div className="flex">
+                    <div className="filled-btn">
+                      <button>
+                        Live Link && Source Code && Tech Stack Details
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </a>
+          </Link>
           <div className="flex">
             <div className="full-btn full-w-btn">
               <button>
