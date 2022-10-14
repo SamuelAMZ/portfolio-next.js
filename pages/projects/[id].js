@@ -2,6 +2,8 @@ import React from "react";
 import Head from "next/head";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { BsArrow90DegLeft } from "react-icons/bs";
+import Link from "next/link";
 
 export const getStaticPaths = async () => {
   const data = [
@@ -92,6 +94,14 @@ const Id = ({ project }) => {
         <div className="post-container md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 flex items-center justify-between md:px-10 xl:px-5">
           <div className="post-grid">
             <div className="post-content">
+              <Link href="/#projects">
+                <a>
+                  <div className="back">
+                    <BsArrow90DegLeft />
+                    <p>Back</p>
+                  </div>
+                </a>
+              </Link>
               <h1>{project.title}</h1>
               <h4 dangerouslySetInnerHTML={{ __html: project.content }}></h4>
             </div>

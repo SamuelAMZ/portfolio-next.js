@@ -3,7 +3,7 @@ import { BiUser, BiHomeAlt } from "react-icons/bi";
 import { CgWorkAlt } from "react-icons/cg";
 import { HiOutlineDocumentDuplicate } from "react-icons/hi";
 import { IoIosArrowUp } from "react-icons/io";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
