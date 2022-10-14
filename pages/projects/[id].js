@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { BsArrow90DegLeft } from "react-icons/bs";
+import { GrFormClose } from "react-icons/gr";
 import Link from "next/link";
+import YoutubeEmbed from "../../components/YoutubeEmbed";
 
 export const getStaticPaths = async () => {
   const data = [
@@ -83,6 +85,16 @@ export const getStaticProps = async (context) => {
 };
 
 const Id = ({ project }) => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  // show videobox
+  const openVideo = () => {
+    setIsVideoOpen(true);
+  };
+  const closeVideo = () => {
+    setIsVideoOpen(false);
+  };
+
   return (
     <>
       <Head>
@@ -94,6 +106,7 @@ const Id = ({ project }) => {
         <div className="post-container md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 flex items-center justify-between md:px-10 xl:px-5">
           <div className="post-grid">
             <div className="post-content">
+              {/* back to all */}
               <Link href="/#projects">
                 <a>
                   <div className="back">
@@ -112,9 +125,9 @@ const Id = ({ project }) => {
                     <a href="#">Live Link</a>
                   </button>
                 </div>
-                <div className="full-btn">
+                <div className="full-btn video-one" onClick={() => openVideo()}>
                   <button>
-                    <a href="#">Video Demo</a>
+                    <p>Video Demo</p>
                   </button>
                 </div>
                 <div className="full-btn">
@@ -182,9 +195,9 @@ const Id = ({ project }) => {
               <a href="#">Live</a>
             </button>
           </div>
-          <div className="full-btn">
+          <div className="full-btn video-one" onClick={() => openVideo()}>
             <button>
-              <a href="#">Video</a>
+              <p>Video</p>
             </button>
           </div>
           <div className="full-btn">
@@ -194,6 +207,19 @@ const Id = ({ project }) => {
           </div>
         </div>
       </div>
+
+      {/* video box */}
+      {isVideoOpen && (
+        <>
+          <div className="videobox-back" onClick={() => closeVideo()}></div>
+          <div className="video-box">
+            <div className="close-video" onClick={() => closeVideo()}>
+              <GrFormClose />
+            </div>
+            <YoutubeEmbed embedId="rokGy0huYEA" />
+          </div>
+        </>
+      )}
 
       <Footer />
     </>
