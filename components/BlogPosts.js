@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const BlogPosts = () => {
   return (
@@ -23,40 +24,50 @@ const BlogPosts = () => {
           <h4 className="subheading">THOUGHT && NEWS</h4>
         </div>
         <div className="posts-content">
-          <div className="post">
-            <div className="title">
-              <div className="date">DESIGN / APRIL 28, 2022</div>
-              <div className="heading">
-                <h3>Why I moved from Wordpress to Webflow</h3>
+          <Link href="/blogs/1">
+            <a>
+              <div className="post">
+                <div className="title">
+                  <div className="date">DESIGN / APRIL 28, 2022</div>
+                  <div className="heading">
+                    <h3>Why I moved from Wordpress to Webflow</h3>
+                  </div>
+                </div>
+                <div className="desc">
+                  <h4>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quam, saepe veniam! Eligendi corrupti velit voluptates ab
+                    labore similique, eveniet illo!
+                  </h4>
+                </div>
               </div>
-            </div>
-            <div className="desc">
-              <h4>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam,
-                saepe veniam! Eligendi corrupti velit voluptates ab labore
-                similique, eveniet illo!
-              </h4>
-            </div>
-          </div>
-          <div className="post">
-            <div className="title">
-              <div className="date">DESIGN / APRIL 28, 2022</div>
-              <div className="heading">
-                <h3>Why I moved from Wordpress to Webflow</h3>
+            </a>
+          </Link>
+          <Link href="/blogs/2">
+            <a>
+              <div className="post">
+                <div className="title">
+                  <div className="date">DESIGN / APRIL 28, 2022</div>
+                  <div className="heading">
+                    <h3>Why I moved from Wordpress to Webflow</h3>
+                  </div>
+                </div>
+                <div className="desc">
+                  <h4>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quam, saepe veniam! Eligendi corrupti velit voluptates ab
+                    labore similique, eveniet illo!
+                  </h4>
+                </div>
               </div>
-            </div>
-            <div className="desc">
-              <h4>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam,
-                saepe veniam! Eligendi corrupti velit voluptates ab labore
-                similique, eveniet illo!
-              </h4>
-            </div>
-          </div>
+            </a>
+          </Link>
           <div className="flex">
-            <div className="full-btn full-w-btn">
-              <button>More Posts</button>
-            </div>
+            <Link href="/blogs">
+              <a className="full-btn full-w-btn">
+                <button>More Posts</button>
+              </a>
+            </Link>
           </div>
         </div>
       </div>

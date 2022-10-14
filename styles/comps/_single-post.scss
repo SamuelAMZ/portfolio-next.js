@@ -90,4 +90,8 @@
     grid-column-gap: 40px;
     grid-row-gap: 40px;
   }
+
+  .blog-post {
+    grid-template-columns: 1fr !important;
+  }
 }
