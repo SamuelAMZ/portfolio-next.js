@@ -1,11 +1,17 @@
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const BlogPosts = () => {
   return (
     <div id="blog" className="about-container">
       <div className="md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-5">
-        <div className="section-head">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.2 }}
+          className="section-head"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -22,10 +28,14 @@ const BlogPosts = () => {
           </svg>
           <h2>Blog Posts</h2>
           <h4 className="subheading">THOUGHT && NEWS</h4>
-        </div>
+        </motion.div>
         <div className="posts-content">
           <Link href="/blogs/1">
-            <a>
+            <motion.a
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               <div className="post">
                 <div className="title">
                   <div className="date">DESIGN / APRIL 28, 2022</div>
@@ -41,10 +51,14 @@ const BlogPosts = () => {
                   </h4>
                 </div>
               </div>
-            </a>
+            </motion.a>
           </Link>
           <Link href="/blogs/2">
-            <a>
+            <motion.a
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               <div className="post">
                 <div className="title">
                   <div className="date">DESIGN / APRIL 28, 2022</div>
@@ -60,7 +74,7 @@ const BlogPosts = () => {
                   </h4>
                 </div>
               </div>
-            </a>
+            </motion.a>
           </Link>
           <div className="flex">
             <Link href="/blogs">

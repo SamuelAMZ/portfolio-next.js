@@ -6,6 +6,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsmenuOpen] = useState(false);
@@ -83,7 +84,7 @@ const Header = () => {
             <ul>
               <li>
                 <Link href="/#top">
-                  <a className="active">Home</a>
+                  <a>Home</a>
                 </Link>
               </li>
               <li>
@@ -105,9 +106,7 @@ const Header = () => {
           ) : (
             <ul>
               <li>
-                <a href="/#top" className="active">
-                  Home
-                </a>
+                <a href="/#top">Home</a>
               </li>
               <li>
                 <a href="/#about">About</a>
@@ -150,7 +149,10 @@ const Header = () => {
               onClick={() => setIsmenuOpen(false)}
             ></div>
 
-            <div
+            <motion.div
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.1 }}
               className="content shadow-xl"
               onClick={() => setIsmenuOpen(false)}
             >
@@ -161,7 +163,7 @@ const Header = () => {
                       <BiHomeAlt />
 
                       <Link href="/#top">
-                        <a className="active">Home</a>
+                        <a>Home</a>
                       </Link>
                     </li>
                     <li>
@@ -195,9 +197,7 @@ const Header = () => {
                   <ul>
                     <li>
                       <BiHomeAlt />
-                      <a className="active" href="/#top">
-                        Home
-                      </a>
+                      <a href="/#top">Home</a>
                     </li>
                     <li>
                       <BiUser />
@@ -218,7 +218,7 @@ const Header = () => {
                   </button>
                 </>
               )}
-            </div>
+            </motion.div>
           </>
         )}
       </div>

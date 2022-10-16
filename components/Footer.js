@@ -3,6 +3,7 @@ import { FiTwitter, FiGithub, FiLinkedin } from "react-icons/fi";
 import { FaEnvelope, FaTelegramPlane } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const [isSubPage, setIsSubPage] = useState(false);
@@ -23,7 +24,12 @@ const Footer = () => {
     <>
       {/* elements */}
       <div className="section elements-container ">
-        <div className="contact-elements md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-0">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="contact-elements md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-0"
+        >
           <div className="elm">
             <div className="icon">
               <FaEnvelope />
@@ -42,7 +48,7 @@ const Footer = () => {
               <h4>@sam_dev09</h4>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="footer-container max-w-full ">

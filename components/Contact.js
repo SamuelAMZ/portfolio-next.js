@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import ContactForm from "./ContactForm";
 
@@ -6,7 +7,12 @@ const Contact = () => {
   return (
     <>
       <div id="contact" className="contact-container layer-section">
-        <div className="section-head">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.2 }}
+          className="section-head"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -23,13 +29,18 @@ const Contact = () => {
           </svg>
           <h2>Contact</h2>
           <h4 className="subheading">I AM AVAILABLE</h4>
-        </div>
+        </motion.div>
 
-        <div className="contact-grid md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 md:px-10 xl:px-5">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="contact-grid md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 md:px-10 xl:px-5"
+        >
           <div className="contact-form-container">
             <ContactForm />
           </div>
-        </div>
+        </motion.div>
 
         {/* layer */}
         <div className="layer2 hidden md:block">

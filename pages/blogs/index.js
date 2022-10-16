@@ -2,10 +2,16 @@ import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Link from "next/link";
+import Head from "next/head";
+import { motion } from "framer-motion";
 
 const index = () => {
   return (
     <>
+      <Head>
+        <title>Blog posts</title>
+      </Head>
+
       <Header />
 
       <div className="section">
@@ -30,7 +36,11 @@ const index = () => {
           </div> */}
           <div className="posts-content">
             <Link href="/blogs/1">
-              <a>
+              <motion.a
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
                 <div className="post">
                   <div className="title">
                     <div className="date">DESIGN / APRIL 28, 2022</div>
@@ -46,10 +56,14 @@ const index = () => {
                     </h4>
                   </div>
                 </div>
-              </a>
+              </motion.a>
             </Link>
             <Link href="/blogs/2">
-              <a>
+              <motion.a
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >
                 <div className="post">
                   <div className="title">
                     <div className="date">DESIGN / APRIL 28, 2022</div>
@@ -65,10 +79,14 @@ const index = () => {
                     </h4>
                   </div>
                 </div>
-              </a>
+              </motion.a>
             </Link>
             <Link href="/blogs/3">
-              <a>
+              <motion.a
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.7 }}
+              >
                 <div className="post">
                   <div className="title">
                     <div className="date">DESIGN / APRIL 28, 2022</div>
@@ -84,7 +102,7 @@ const index = () => {
                     </h4>
                   </div>
                 </div>
-              </a>
+              </motion.a>
             </Link>
           </div>
         </div>

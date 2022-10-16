@@ -6,6 +6,7 @@ import { BsArrow90DegLeft } from "react-icons/bs";
 import { GrFormClose } from "react-icons/gr";
 import Link from "next/link";
 import YoutubeEmbed from "../../components/YoutubeEmbed";
+import { motion } from "framer-motion";
 
 export const getStaticPaths = async () => {
   const data = [
@@ -105,7 +106,12 @@ const Id = ({ project }) => {
       <div className="section post-section">
         <div className="post-container md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 flex items-center justify-between md:px-10 xl:px-5">
           <div className="post-grid">
-            <div className="post-content">
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="post-content"
+            >
               {/* back to all */}
               <Link href="/#projects">
                 <a>
@@ -117,7 +123,7 @@ const Id = ({ project }) => {
               </Link>
               <h1>{project.title}</h1>
               <h4 dangerouslySetInnerHTML={{ __html: project.content }}></h4>
-            </div>
+            </motion.div>
             <div className="post-actions !hidden md:!block">
               <div className="actions">
                 <div className="full-btn">
@@ -216,7 +222,7 @@ const Id = ({ project }) => {
             <div className="close-video" onClick={() => closeVideo()}>
               <GrFormClose />
             </div>
-            <YoutubeEmbed embedId="rokGy0huYEA" />
+            <YoutubeEmbed embedId="PlbUYl67LTY" />
           </div>
         </>
       )}

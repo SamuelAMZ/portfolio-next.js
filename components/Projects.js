@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   // link projects to single pages
@@ -32,7 +33,12 @@ const Projects = () => {
   return (
     <div id="projects" className="section projects">
       <div className="about-grid md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-5">
-        <div className="section-head">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.2 }}
+          className="section-head"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -49,10 +55,14 @@ const Projects = () => {
           </svg>
           <h2>Projects</h2>
           <h4 className="subheading">LEARNINGS && ACCOIMPLISHMENTS</h4>
-        </div>
+        </motion.div>
         <div className="projects-elements">
           <Link href={`/projects/1`}>
-            <a>
+            <motion.a
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               <div className="project">
                 <div className="img">
                   <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
@@ -75,10 +85,14 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </a>
+            </motion.a>
           </Link>
           <Link href={`/projects/2`}>
-            <a>
+            <motion.a
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               <div className="project">
                 <div className="img">
                   <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
@@ -99,10 +113,14 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </a>
+            </motion.a>
           </Link>
           <Link href={`/projects/3`}>
-            <a>
+            <motion.a
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               <div className="project">
                 <div className="img">
                   <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
@@ -125,10 +143,14 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </a>
+            </motion.a>
           </Link>
           <Link href={`/projects/4`}>
-            <a>
+            <motion.a
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               <div className="project">
                 <div className="img">
                   <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
@@ -149,7 +171,7 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-            </a>
+            </motion.a>
           </Link>
           <div className="flex">
             <div className="full-btn full-w-btn">

@@ -1,10 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <div id="about" className="about-container">
       <div className="about-grid md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-5">
-        <div className="about-head">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          className="about-head"
+        >
           <div className="header-detail-wrapper">
             <h5>ABOUT</h5>
             <svg
@@ -26,8 +32,13 @@ const About = () => {
           <div>
             <h2>Always Cloud scalling && app testing first approch.</h2>
           </div>
-        </div>
-        <div className="about-body">
+        </motion.div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="about-body"
+        >
           <h3>
             I am a energetic, flexible and hardworking individual. Broad skills
             and experience in fullstack web development.
@@ -60,7 +71,7 @@ const About = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

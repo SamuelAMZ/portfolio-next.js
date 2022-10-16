@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Link from "next/link";
 import { BsArrow90DegLeft } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 export const getStaticPaths = async () => {
   const data = [
@@ -81,7 +82,12 @@ const Id = ({ project }) => {
       <div className="section post-section">
         <div className="post-container xl:max-w-5xl mx-auto px-5 py-5 flex items-center justify-between md:px-10 xl:px-5">
           <div className="post-grid blog-post">
-            <div className="post-content">
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="post-content"
+            >
               <Link href="/blogs">
                 <a>
                   <div className="back">
@@ -92,7 +98,7 @@ const Id = ({ project }) => {
               </Link>
               <h1>{project.title}</h1>
               <h4 dangerouslySetInnerHTML={{ __html: project.content }}></h4>
-            </div>
+            </motion.div>
           </div>
         </div>
 

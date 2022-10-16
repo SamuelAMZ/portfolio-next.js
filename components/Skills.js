@@ -1,11 +1,17 @@
 import React from "react";
 import { BsDot } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
     <div className="section layer-section">
       <div className="section-container md:max-w-7xl xl:max-w-screen-xl mx-auto px-5 py-5 md:px-10 xl:px-5">
-        <div className="section-head">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.2 }}
+          className="section-head"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -22,102 +28,140 @@ const Skills = () => {
           </svg>
           <h2>Skills</h2>
           <h4 className="subheading">WEB DEVELOPER SKILLS</h4>
-        </div>
+        </motion.div>
         <div className="section-content">
-          <div className="box">
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="box"
+          >
             <h3 className="mb-7">Frontend</h3>
             <h4 className="skills">
-              REACT.JS
+              React.js
               <BsDot />
-              NEXT.JS
+              Next.js
               <BsDot />
-              REDUX
+              Redux
               <BsDot />
-              CONTEXT API
+              Context API
               <BsDot />
-              JAVASCRIPT
+              Javascript
               <BsDot />
-              TYPESCRIPT
+              Typescript
               <BsDot />
               HTML/CSS
               <BsDot />
               SASS
               <BsDot />
-              TAILWIND
+              Tailwind
               <BsDot />
-              DAISY UI
+              Daisy UI
               <BsDot />
               MUI
+              <BsDot />
+              Chackra UI
+              <BsDot />
+              Framer Motion
             </h4>
-          </div>
-          <div className="box">
+          </motion.div>
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.9 }}
+            className="box"
+          >
             <h3 className="mb-7">Backend</h3>
             <h4 className="skills">
-              NODE.JS
+              Node.js
               <BsDot />
-              EXPRESS.JS
+              Express.js
               <BsDot />
-              MONGODB
+              Mongo DB
               <BsDot />
-              MYSQL
+              Mysql DB
               <BsDot />
               SQL
               <BsDot />
-              GRAPHQL
+              Graph QL
               <BsDot />
-              FIREBASE
+              Firebase
               <BsDot />
-              PUPPETEER/SCRAPING
+              Puppeteer/Scraping
               <BsDot />
-              REST API
+              Rest API
               <BsDot />
-              AUTH0
+              Auth0
               <BsDot />
               JWT
               <BsDot />
-              PASSPORT.JS
+              Passport.js
             </h4>
-          </div>
-          <div className="box">
+          </motion.div>
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="box"
+          >
             <h3 className="mb-7">Cloud</h3>
             <h4 className="skills">
               AWS
               <BsDot />
-              NETLIFY
+              Linode
               <BsDot />
-              CLOUD FUNCTIONS
+              Cloud Functions
               <BsDot />
-              DOCKER
+              Docker
               <BsDot />
-              KUBERNETES
+              Kubernetes
               <BsDot />
-              TERRAFORM
+              Terraform
               <BsDot />
-              GITHUB ACTIONS
+              Github Actions CI/CD
               <BsDot />
-              LINUX
+              Linux
               <BsDot />
-              BASH
+              Bash
+              <BsDot />
+              Nginx
+              <BsDot />
+              PM2
+              <BsDot />
+              Netlify
+              <BsDot />
+              Vercel
             </h4>
-          </div>
-          <div className="box">
-            <h3 className="mb-7">Tools</h3>
+          </motion.div>
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.9 }}
+            className="box"
+          >
+            <h3 className="mb-7">Tools & Testing</h3>
             <h4 className="skills">
-              VSCODE
+              VsCode
               <BsDot />
-              GIT/GITHUB
+              Git/Github
               <BsDot />
-              JEST
+              Jest
               <BsDot />
-              STRAPI
+              Mocha
               <BsDot />
-              WORDPRESS
+              Chai
               <BsDot />
-              FIGMA
+              Puppeteer/Testing
               <BsDot />
-              ADOBE XD
+              Strapi
+              <BsDot />
+              Wordpress
+              <BsDot />
+              Figma
+              <BsDot />
+              Adobe XD
             </h4>
-          </div>
+          </motion.div>
         </div>
       </div>
 
