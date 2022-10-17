@@ -66,6 +66,18 @@
   }
 }
 
+.post-content-actual {
+  ul {
+    padding: 0 0 0 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    li {
+      list-style: square;
+    }
+  }
+}
+
 @media (min-width: 1024px) {
   .project {
     grid-template-columns: 1fr 1fr !important;
@@ -84,7 +96,7 @@
 @media (max-width: 768px) {
   .img {
     img {
-      height: 200px !important;
+      height: 250px !important;
     }
   }
 }

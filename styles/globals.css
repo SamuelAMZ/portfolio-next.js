@@ -11,7 +11,8 @@ body {
   color: #161513;
   font-size: 15px;
   line-height: 20px;
-  overflow-x: hidden;
+  overflow-x: hidden; /* fallback to clip */
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 

@@ -65,7 +65,7 @@ const Projects = () => {
             >
               <div className="project">
                 <div className="img">
-                  <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
+                  <img src="/img/cloud.jpg" />
                 </div>
                 <div className="desc">
                   <div className="badge">fullstack && scraping</div>
@@ -95,7 +95,7 @@ const Projects = () => {
             >
               <div className="project">
                 <div className="img">
-                  <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
+                  <img src="/img/social.jpg" />
                 </div>
                 <div className="desc pro-reverse">
                   <div className="badge">fullstack</div>
@@ -123,7 +123,7 @@ const Projects = () => {
             >
               <div className="project">
                 <div className="img">
-                  <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
+                  <img src="/img/youtube.jpg" />
                 </div>
                 <div className="desc">
                   <div className="badge">backend only</div>
@@ -153,7 +153,7 @@ const Projects = () => {
             >
               <div className="project">
                 <div className="img">
-                  <img src="https://assets.website-files.com/6267660573e4ca6c9d6d12d4/6267689899af93b8b041554f_Project%2001.png" />
+                  <img src="/img/race.jpg" />
                 </div>
                 <div className="desc pro-reverse">
                   <div className="badge">frontend only</div>

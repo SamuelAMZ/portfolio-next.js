@@ -54,7 +54,7 @@ export const getStaticProps = async (context) => {
       id: "1",
       title: "Cloud providers pricing API",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "<div><h3>Features</h3><br><ul><li>Prices of different products from different providers like (compute,database, storage, load balancers)</li><li>Support AWS, GCP, Azure, Linode, Digital Ocean, Ovh cloud, Vultr</li><li>Live search for providers</li><li>Download data in Json or CSV format</li><li>Filter data by price per month or by price per hour</li><li>Filter machines by'general purpose, CPU optimized, RAM optimized'</li><li>Filter databases by 'Mysql, Postgres, MongoDB'.</li><li>Filter storage type by 'block or object storage'</li><li>Possibility to display and read 5 or 50 data at a time</li><li>More ...</li></ul><br><br><h3>Frontend</h3><br><ul><li>React.js</li><li>ContextAPI</li><li>Axios</li><li>React-router-dom</li><li>Hooks</li><li>SCSS</li></ul><br><br><h3>Backend</h3><br><ul><li>Nodejs</li><li>Express.js</li><li>Mongodb driver</li><li>Mongoose</li><li>JWT</li><li>Bcrypt</li><li>@hapi/joi</li></ul><br><br><h3>Scraper</h3><br><ul><li>Puppeteer</li><li>Puppeteer-extra</li><li>Puppeteer-extra-plugin-stealth</li></ul><br><br><h3>Deployement/Cloud</h3><br><ul><li>Frontend hosted on Netlify</li><li>Backend hosted on App engine Google Cloud Platform</li><li>Database hosted on MongoDB Atlas</li><li>Scraper on a cron Job on an Ubuntu instance at Linode</li></ul></div>",
     },
     {
       id: "2",
@@ -83,6 +83,10 @@ export const getStaticProps = async (context) => {
       project: data[id - 1],
     },
   };
+};
+
+const test = () => {
+  return <></>;
 };
 
 const Id = ({ project }) => {
@@ -122,7 +126,10 @@ const Id = ({ project }) => {
                 </a>
               </Link>
               <h1>{project.title}</h1>
-              <h4 dangerouslySetInnerHTML={{ __html: project.content }}></h4>
+              <h4
+                className="post-content-actual"
+                dangerouslySetInnerHTML={{ __html: project.content }}
+              ></h4>
             </motion.div>
             <div className="post-actions !hidden md:!block">
               <div className="actions">
