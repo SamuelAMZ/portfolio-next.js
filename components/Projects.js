@@ -54,7 +54,7 @@ const Projects = () => {
             />
           </svg>
           <h2>Projects</h2>
-          <h4 className="subheading">LEARNINGS && ACCOIMPLISHMENTS</h4>
+          <h4 className="subheading">LEARNINGS && ACCOMPLISHMENTS</h4>
         </motion.div>
         <div className="projects-elements">
           <Link href={`/projects/1`}>
@@ -174,13 +174,15 @@ const Projects = () => {
             </motion.a>
           </Link>
           <div className="flex">
-            <div className="full-btn full-w-btn">
-              <button>
-                <a href="https://github.com/SamuelAMZ" target="blank">
-                  More Projects
-                </a>
-              </button>
-            </div>
+            <a
+              className="full-btn full-w-btn"
+              href="https://github.com/SamuelAMZ"
+              target="blank"
+            >
+              <div>
+                <button>More Projects</button>
+              </div>
+            </a>
           </div>
         </div>
       </div>

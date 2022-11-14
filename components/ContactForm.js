@@ -9,7 +9,6 @@ const ContactForm = () => {
   const [values, setValues] = useState({
     name: "",
     email: "",
-    phone: "",
     message: "",
   });
   const [captchaState, setCaptachaState] = useState(false);
@@ -19,7 +18,7 @@ const ContactForm = () => {
     // load button
     setIsLoading(true);
     // validate values
-    if (values.name && values.email && values.phone && values.message) {
+    if (values.name && values.email && values.message) {
       // check for captcha
       if (captchaState) {
         console.log("go");
@@ -32,11 +31,10 @@ const ContactForm = () => {
           "-" +
           date.getDate();
 
-        const url = "https://green-python-sock.cyclic.app/lfish/contact";
+        const url = "https://green-python-sock.cyclic.app/lfish/contact-self";
         const data = {
           name: values.name,
           email: values.email,
-          phone: values.phone,
           message: values.message,
           captcha: captchaState,
           date: current_date,
@@ -46,7 +44,7 @@ const ContactForm = () => {
           .post(url, data)
           .then((res) => {
             // console.log(res.data.message);
-            notification("Message Envoyé");
+            notification("Message sent, txs");
             setIsLoading(false);
             emptyFields();
           })
@@ -56,11 +54,12 @@ const ContactForm = () => {
             setIsLoading(false);
           });
       } else {
-        notification("verifiez captcha");
+        notification("Verify reCaptcha");
         setIsLoading(false);
       }
     } else {
-      notification("verifiez les champs");
+      console.log("here");
+      notification("verify fields");
       setIsLoading(false);
     }
   };
@@ -77,7 +76,6 @@ const ContactForm = () => {
     setValues({
       name: "",
       email: "",
-      phone: "",
       message: "",
     });
   };
@@ -121,7 +119,6 @@ const ContactForm = () => {
                 setValues({
                   name: e.target.value,
                   email: values.email,
-                  phone: values.phone,
                   message: values.message,
                 })
               }
@@ -142,7 +139,6 @@ const ContactForm = () => {
                 setValues({
                   name: values.name,
                   email: e.target.value,
-                  phone: values.phone,
                   message: values.message,
                 })
               }
@@ -163,7 +159,6 @@ const ContactForm = () => {
                 setValues({
                   name: values.name,
                   email: values.email,
-                  phone: values.phone,
                   message: e.target.value,
                 })
               }
@@ -174,7 +169,7 @@ const ContactForm = () => {
         {/* captcha */}
         <ReCAPTCHA
           className="thecaptcha"
-          sitekey="6LepjkEiAAAAAIRJVxvsH0jMHKy2zxglStU0OHRi"
+          sitekey="6Ld8_QYjAAAAACK8HR2xBedxgOPORx1Drn0FlXnb"
           onChange={handleCaptcha}
         />
 

@@ -63,7 +63,7 @@ export const getStaticProps = async (context) => {
       id: "2",
       title: "Web3 advance social media platform",
       content:
-        "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+        '<div><h3>Features</h3><br /><ul><li> A social network quite similar to twitter with its main features but with   a Web3 dimension</li><li>Signup</li><li>Login</li><li>Create a profile</li><li>Update profile</li><li>Upload profile image, loaded to cloudinary</li><li>Add new post</li><li>Like post</li><li>Comment post</li><li>Bookmark post</li><li>Have post "how many views" metrics in live</li><li>Search users</li><li>Follow users</li><li>Read users bio</li><li>More ...</li></ul><br /><br /><h3>Frontend</h3><br /><ul><li>React.js</li><li>ContextAPI</li><li>React-router-dom</li><li>Hooks</li><li>Tailwind</li><li>SCSS</li><li>Daisy</li><li>Post css</li></ul><br /><br /><h3>Backend</h3><br /><ul><li>Nodejs</li><li>Express.js</li><li>Mongoose</li><li>JWT</li><li>Bcrypt</li><li>@hapi/joi</li><li>cookie-parse</li><li>cors</li></ul><br /><br /></div>',
       live: "",
       code: "https://github.com/SamuelAMZ/web3-advance-social-media-backend",
       video: "",
@@ -72,7 +72,7 @@ export const getStaticProps = async (context) => {
       id: "3",
       title: "Youtube video transcritions fetcher API",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "<div><h3>Features</h3><br /><ul><li>A Node based API for getting and fetching youtube videos transcription content.</li><li>Youtube video transcription text</li><li>Youtube video transcription time</li><li>Youtube video transcription both pairs</li><li>Youtube video transcription words</li><li>Youtube video transcription sentences</li></ul><br /><br /><h3>Backend</h3><br /><ul><li>Nodejs</li><li>Express.js</li><li>puppeteer</li><li>puppeteer-extra</li><li>puppeteer-extra-plugin-stealth</li></div>",
       live: "",
       code: "https://github.com/SamuelAMZ/youtube-transcript-data-api",
       video: "",
@@ -81,7 +81,7 @@ export const getStaticProps = async (context) => {
       id: "4",
       title: "Advance typeracer racing game",
       content:
-        "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+        "<div><h3>Features</h3><br /><ul><li>An advanced typeracer game allows you to compete against very fast bots that will have a random speed (CPM) or you can also choose the speed you want to compare against. A training option is also available.</li><li>Run against a bot that will have a random speed between 20wpm and 100wpm</li><li>Choose exactly what you want for your next race. You can choose your bots (challengers) , their name, their speed and the number of bot.</li><li>Training option</li><li>Cars Speed count</li><li>Timer</li><li>Results details at the end of each race</li></ul><br /><br /><h3>Frontend</h3><br /><ul><li>Vanilla JS</li><li>webpack</li><li>webpack cli</li><li>SASS</li></div>",
       live: "https://typeracergame.netlify.app/",
       code: "https://github.com/SamuelAMZ/Advance-Typeracer-Game",
       video: "",

@@ -33,3 +33,17 @@ a {
 ::-webkit-scrollbar-thumb {
   background: #161513;
 }
+
+/*  notifications */
+.notification {
+  background-color: white;
+  color: black;
+  position: fixed;
+  top: 3%;
+  right: 2%;
+  padding: 1rem 1rem 0.7rem 1rem;
+  border-radius: 10px 10px 0 10px;
+  border-bottom: 0.3rem solid blue;
+  z-index: 20000;
+  box-shadow: 0 0 12px 12px rgba(20, 20, 20, 0.09);
+}
