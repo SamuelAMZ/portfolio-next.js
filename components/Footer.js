@@ -79,9 +79,9 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#blog">
+                  {/* <Link href="/#blog">
                     <a>Blog</a>
-                  </Link>
+                  </Link> */}
                 </li>
               </ul>
             ) : (
@@ -97,9 +97,9 @@ const Footer = () => {
                 <li>
                   <a href="/#projects">Projets</a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="/#blog">Blog</a>
-                </li>
+                </li> */}
               </ul>
             )}
           </div>

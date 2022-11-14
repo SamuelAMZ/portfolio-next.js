@@ -114,9 +114,9 @@ const Header = () => {
               <li>
                 <a href="/#projects">Projets</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="/#blog">Blog</a>
-              </li>
+              </li> */}
             </ul>
           )}
         </div>
