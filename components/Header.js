@@ -97,11 +97,11 @@ const Header = () => {
                   <a>Projets</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/#blog">
                   <a>Blog</a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           ) : (
             <ul>
@@ -178,12 +178,12 @@ const Header = () => {
                         <a>Projets</a>
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <HiOutlineDocumentDuplicate />
                       <Link href="/#blog">
                         <a>Blog</a>
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
 
                   <button>
@@ -207,10 +207,10 @@ const Header = () => {
                       <CgWorkAlt />
                       <a href="/#projects">Projets</a>
                     </li>
-                    <li>
+                    {/* <li>
                       <HiOutlineDocumentDuplicate />
                       <a href="/#blog">Blog</a>
-                    </li>
+                    </li> */}
                   </ul>
 
                   <button>

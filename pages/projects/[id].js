@@ -55,24 +55,36 @@ export const getStaticProps = async (context) => {
       title: "Cloud providers pricing API",
       content:
         "<div><h3>Features</h3><br><ul><li>Prices of different products from different providers like (compute,database, storage, load balancers)</li><li>Support AWS, GCP, Azure, Linode, Digital Ocean, Ovh cloud, Vultr</li><li>Live search for providers</li><li>Download data in Json or CSV format</li><li>Filter data by price per month or by price per hour</li><li>Filter machines by'general purpose, CPU optimized, RAM optimized'</li><li>Filter databases by 'Mysql, Postgres, MongoDB'.</li><li>Filter storage type by 'block or object storage'</li><li>Possibility to display and read 5 or 50 data at a time</li><li>More ...</li></ul><br><br><h3>Frontend</h3><br><ul><li>React.js</li><li>ContextAPI</li><li>Axios</li><li>React-router-dom</li><li>Hooks</li><li>SCSS</li></ul><br><br><h3>Backend</h3><br><ul><li>Nodejs</li><li>Express.js</li><li>Mongodb driver</li><li>Mongoose</li><li>JWT</li><li>Bcrypt</li><li>@hapi/joi</li></ul><br><br><h3>Scraper</h3><br><ul><li>Puppeteer</li><li>Puppeteer-extra</li><li>Puppeteer-extra-plugin-stealth</li></ul><br><br><h3>Deployement/Cloud</h3><br><ul><li>Frontend hosted on Netlify</li><li>Backend hosted on App engine Google Cloud Platform</li><li>Database hosted on MongoDB Atlas</li><li>Scraper on a cron Job on an Ubuntu instance at Linode</li></ul></div>",
+      live: "https://cloudpricingdata.com/",
+      code: "https://github.com/SamuelAMZ/cloud-pricing-api",
+      video: "",
     },
     {
       id: "2",
       title: "Web3 advance social media platform",
       content:
         "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+      live: "",
+      code: "https://github.com/SamuelAMZ/web3-advance-social-media-backend",
+      video: "",
     },
     {
       id: "3",
       title: "Youtube video transcritions fetcher API",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      live: "",
+      code: "https://github.com/SamuelAMZ/youtube-transcript-data-api",
+      video: "",
     },
     {
       id: "4",
       title: "Advance typeracer racing game",
       content:
         "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+      live: "https://typeracergame.netlify.app/",
+      code: "https://github.com/SamuelAMZ/Advance-Typeracer-Game",
+      video: "",
     },
   ];
 
@@ -133,21 +145,25 @@ const Id = ({ project }) => {
             </motion.div>
             <div className="post-actions !hidden md:!block">
               <div className="actions">
-                <div className="full-btn">
+                {project.live && (
+                  <a href={project.live}>
+                    <div className="full-btn">
+                      <button>Live</button>
+                    </div>
+                  </a>
+                )}
+                {/* <div className="full-btn video-one" onClick={() => openVideo()}>
                   <button>
-                    <a href="#">Live Link</a>
+                    <p>Video</p>
                   </button>
-                </div>
-                <div className="full-btn video-one" onClick={() => openVideo()}>
-                  <button>
-                    <p>Video Demo</p>
-                  </button>
-                </div>
-                <div className="full-btn">
-                  <button>
-                    <a href="#">Source Code</a>
-                  </button>
-                </div>
+                </div> */}
+                {project.code && (
+                  <a href={project.code}>
+                    <div className="full-btn">
+                      <button>Code</button>
+                    </div>
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -203,21 +219,25 @@ const Id = ({ project }) => {
       {/* mobile actions */}
       <div className="mobile-actions md:hidden">
         <div className="actions">
-          <div className="full-btn">
-            <button>
-              <a href="#">Live</a>
-            </button>
-          </div>
-          <div className="full-btn video-one" onClick={() => openVideo()}>
-            <button>
-              <p>Video</p>
-            </button>
-          </div>
-          <div className="full-btn">
-            <button>
-              <a href="#">Code</a>
-            </button>
-          </div>
+          {project.live && (
+            <a href={project.live}>
+              <div className="full-btn">
+                <button>Live</button>
+              </div>
+            </a>
+          )}
+          {/* <div className="full-btn video-one" onClick={() => openVideo()}>
+                  <button>
+                    <p>Video</p>
+                  </button>
+                </div> */}
+          {project.code && (
+            <a href={project.code}>
+              <div className="full-btn">
+                <button>Code</button>
+              </div>
+            </a>
+          )}
         </div>
       </div>
 

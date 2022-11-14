@@ -6,6 +6,7 @@
     top: 0;
     right: 0;
     transform: translate(50%, 100%);
+    z-index: 1;
 
     &:last-child {
       position: absolute;
@@ -52,8 +53,9 @@
 
         position: sticky;
         top: 3rem;
+        z-index: 2;
 
-        div {
+        a {
           width: 100%;
           display: flex;
           align-items: center;
@@ -84,12 +86,13 @@
     width: 100%;
     box-shadow: 0 0 5px 10px rgba(193, 193, 193, 0.156);
 
-    div {
+    a {
       width: 100% !important;
       border-right: 1px solid white;
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: #161513;
 
       &:last-child {
         border-right: none;
